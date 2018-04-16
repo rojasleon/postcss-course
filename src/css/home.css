@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Dosis', system-ui;
 }
 :root {
   --darkColor: rgb(23,25,49);
@@ -53,7 +53,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr 1fr;
-  /* background: var(--darkColor); */
+  background: var(--darkColor);
   color: white;
   padding: 1em;
   box-sizing: border-box;
@@ -61,7 +61,7 @@ body {
   overflow: auto;
   /* background: color(black alpha(50%) contrast(50%)); */
   /* background: hwb(230, 8%, 82%, 1); */
-  background: gray(204);
+  /* background: gray(204); */
 }
 
 /*Logo*/
