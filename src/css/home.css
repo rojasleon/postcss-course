@@ -36,6 +36,14 @@ body {
   grid-template-rows: 1fr 150px;
   grid-template-areas: "sidebar primary"
                        "sidebar featuring";
+  @media(--small) {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 150px;
+    grid-template-areas: "primary"
+                         "sidebar"
+                         "featuring";
+  }
 }
 
 .home-sidebar {
@@ -91,20 +99,33 @@ body {
   padding: 0 20px;
 }
 
-.myPlaylist-item a {
-  color: white;
-  text-decoration: none;
-  font-size: .8em;
-  display: block;
-  margin-bottom: 7px;
-}
-.myPlaylist-item:last-child a {
-  margin-bottom: 0;
+.myPlaylist-item :any-link:hover {
+  transform: scale(1.1);
+  color: color(peru l(80%) s(50%))
 }
 
+.myPlaylist-item:matches(:last-child, :nth-of-type(3), :first-child) {
+  background: color(red l(70%));
+}
 
-.myPlaylist-item a:hover {
-  text-decoration: underline;
+.myPlaylist-item:not(:last-child, :nth-of-type(3), :first-child) {
+  background: color(blue l(80%));
+}
+
+.myPlaylist-item {
+  & a {
+    color: white;
+    text-decoration: none;
+    font-size: .8em;
+    display: block;
+    margin-bottom: 7px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &:last-child a {
+    margin-bottom: 0;
+  }
 }
 
 /*playlistFriends*/
@@ -241,6 +262,15 @@ body {
   align-items: center;
   padding-left: 100px;
   color: white;
+  @media(--small) {
+    .featuring {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 150px;
+    }
+  }
 }
 
 .featuring-image {
@@ -258,24 +288,3 @@ body {
 @custom-media --small (width < 768px);
 /* @custom-media --medium (width >= 768px); */
 @custom-media --large (width >= 1024px);
-
-@media(--small) {
-  body {
-    border: 10px solid blue;
-  }
-  .home {
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 150px;
-    grid-template-areas: "primary"
-                         "sidebar"
-                         "featuring";
-  }
-  .featuring {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-  }
-}
