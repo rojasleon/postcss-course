@@ -4,7 +4,7 @@
   "description": "Course Postcss",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx postcss src/css/index.css -o dist/css/index.css -w"
   },
   "repository": {
     "type": "git",
