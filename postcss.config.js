@@ -1,22 +1,21 @@
 module.exports = {
   plugins: [
-    require('postcss-import'),
-    require('postcss-font-magician')({
-      variants: {
-        'Lato': {
-          '300': [],
-          '400': []
-        }
-      }
+    require('postcss-import')({
+      plugins: [
+        require('stylelint')
+      ]
     }),
     require('postcss-cssnext')({
       features: {
-        autoprefixer: {
-          grid: true
-        },
+        autoprefixer: false,
         customProperties: false,
         calc: false
-      }
+      },
+      warnForDuplicates: false
+    }),
+    require('css-mqpacker'),
+    require('cssnano')({
+      autoprefixer: false,
     })
   ]
 }

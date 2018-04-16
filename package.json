@@ -22,9 +22,12 @@
   "homepage": "https://github.com/rojasleon/postcss-course#readme",
   "devDependencies": {
     "autoprefixer": "^8.2.0",
+    "css-mqpacker": "^6.0.2",
+    "cssnano": "^3.10.0",
     "postcss-cli": "^5.0.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-font-magician": "^2.1.1",
-    "postcss-import": "^11.1.0"
+    "postcss-import": "^11.1.0",
+    "stylelint": "^9.2.0"
   }
 }
