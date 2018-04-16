@@ -3,7 +3,7 @@ body {
   font-family: 'Dosis', sans-serif;
 }
 :root {
-  --darkColor: rgb(253, 120, 7);
+  --darkColor: rgb(23, 25, 49);
   --lightColor: white;
   --warningColor: rgb(254, 245, 240);
 }
@@ -63,18 +63,27 @@ body {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto 1fr 1fr;
       grid-template-rows: auto 1fr 1fr;
-  background: var(--darkColor);
+  /* background: var(--darkColor); */
   color: white;
   padding: 1em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100vh;
   overflow: auto;
+  /* background: color(black alpha(50%) contrast(50%)); */
+  /* background: hwb(230, 8%, 82%, 1); */
+  background: rgb(204, 204, 204);
 }
 
 /*Logo*/
 .logo {
-
+  width: calc(100% - 100px);
+  margin: 0 auto;
+  background-image: url('https://static.platzi.com/media/tmp/class-files/git/platzi-video-postcss/platzi-video-postcss-4dc3717b8509b2356d3e6977c90c048157c4644a/src/images/platzi-video.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
 }
 .logo-image {
   margin: 0;
@@ -310,4 +319,10 @@ body {
     right: 0;
     height: 150px;
   }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.logo {
+  background-image: url('https://static.platzi.com/media/tmp/class-files/git/platzi-video-postcss/platzi-video-postcss-4dc3717b8509b2356d3e6977c90c048157c4644a/src/images/platzi-video.png');
+}
 }
