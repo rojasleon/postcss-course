@@ -4,7 +4,8 @@ module.exports = {
       features: {
         autoprefixer: {
           grid: true,
-        }
+        },
+        customProperties: false
       }
     })
   ]

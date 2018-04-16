@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 :root {
-  --darkColor: #15192a;
+  --darkColor: rgb(253,120,7);
   --lightColor: white;
-  --warningColor: red;
+  --warningColor: rgb(254,245,240);
   --button: {
     border: 1px solid var(--lightColor);
     border-radius: 5px;
@@ -24,12 +24,11 @@ body {
 }
 
 .btn.warning {
-  background: var(--warningColor);
+  border: 1px solid var(--warningColor);
 }
 
 /*home layout*/
 .home {
-  /* autoprefixer off */
   background: var(--lightColor);
   display: grid;
   height: 100vh;
