@@ -245,3 +245,28 @@ body {
   font-size: 1.3em;
   margin: 10px;
 }
+/*@custom-media --extra-small (width < 480px);*/
+@custom-media --small (width < 768px);
+/* @custom-media --medium (width >= 768px); */
+@custom-media --large (width >= 1024px);
+
+@media(--small) {
+  body {
+    border: 10px solid blue;
+  }
+  .home {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 150px;
+    grid-template-areas: "primary"
+                         "sidebar"
+                         "featuring";
+  }
+  .featuring {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+  }
+}

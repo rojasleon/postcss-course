@@ -3,9 +3,10 @@ module.exports = {
     require('postcss-cssnext')({
       features: {
         autoprefixer: {
-          grid: true,
+          grid: true
         },
-        customProperties: false
+        customProperties: false,
+        calc: false
       }
     })
   ]
