@@ -1,0 +1,7 @@
+.btn {
+  @apply --button;
+}
+
+.btn.warning {
+  border: 1px solid var(--warningColor);
+}

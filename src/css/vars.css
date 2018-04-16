@@ -1,0 +1,21 @@
+:root {
+  --darkColor: rgb(23,25,49);
+  --lightColor: white;
+  --warningColor: rgb(254,245,240);
+  --button: {
+    border: 1px solid var(--lightColor);
+    border-radius: 5px;
+    background: var(--darckColor);
+    color: var(--lightColor);
+    padding: .5em 2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 5px solid var(--lightColor)
+  };
+}
+
+/*@custom-media --extra-small (width < 480px);*/
+@custom-media --small (width < 768px);
+/* @custom-media --medium (width >= 768px); */
+@custom-media --large (width >= 1024px);
